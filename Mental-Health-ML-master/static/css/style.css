@@ -1,0 +1,89 @@
+.custom-heading {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.custom-description {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #666;
+}
+.center-content {
+  color: #333;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  height: 100vh; /* This ensures that the content is centered vertically within the viewport */
+}
+.content-box {
+  width: 300px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  /* justify-content: center;
+  align-items: center; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* margin: 10px; */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #751b1b;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.bg-logo{
+  background: url('/Mental-Health-ML-master/static/assets/Mind-PNG-Images.png');
+  background: url('/Mental-Health-ML-master//static/assets/Mind-PNG-Images.png');
+}
+
+.container {
+  max-width: 400px;
+  background-color: #b88a8a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="number"], select {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+

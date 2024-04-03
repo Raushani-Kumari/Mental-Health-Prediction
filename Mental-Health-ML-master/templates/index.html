@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Mental_health Prediction</title>
+
+    <!-- CSS  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="./static/css2/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link href="./static/css/style.css" />
+  </head>
+
+  <body class="bg-logo">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><b>Prediction</b></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link btn" href="#"><b>Login</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn" href="#"><b>Signup</b></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center p-3">
+          <h1 class="custom-heading">Mental Health Prediction</h1>
+          <h2 class="custom-description">
+            Predict the probability of the need for mental health treatment
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container ">
+      <div class="justify-content-center row font-weight-bold mt-2 p-1">
+        Instructions for filling the form:
+      </div>
+      <div class="justify-content-center row font-weight-bold mb-2">
+        Please provide the correct details for better result
+      </div>
+      <div class="justify-content-start row font-weight-bold mt-1">
+       1. Enter Age in numbers.
+      </div>
+      <div class="justify-content-start row font-weight-bold">
+       2. Family History denotes whether any of your family member have had any treatment related to mental health.
+      </div>
+      <div class="justify-content-start row font-weight-bold">
+        3. Care option denotes if you have someone by your side to look after you or are you all alone after work.
+      </div>
+      <div class = "justify-content-start row font-weight-bold">
+        4. Anxious - Do you get anxious out of no reason ?
+    </div>
+
+    <div class="container m-5 p-2">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body p-3">
+              <h2 class="card-title text-center">Health Information Form</h2>
+              <form action="/predict" method="post">
+                <div class="form-group">
+                  <label for="age">Age:</label>
+                  <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="gender">Gender:</label>
+                  <select id="gender" name="gender" class="form-control" required>
+                      <option value="">Select</option>
+                      <option value="0">Male</option>
+                      <option value="1">Female</option>
+                      <option value="2">Trans</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="family_history">Family History:</label>
+                  <select id="family_history" name="family_history" class="form-control" required>
+                      <option value="">Select</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="Benefits">Work-Life Balance:</label>
+                  <select id="Benefits" name="Benefits" class="form-control" required>
+                      <option value="">Select</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      <option value="2">Don't Know</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="care_options">Care options:</label>
+                <select id="care_options" name="care_options" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    <option value="2">Not Sure</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="anonymity">Anxious : </label>
+              <select id="anonymity" name="anonymity" class="form-control" required>
+                  <option value="">Select</option>
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                  <option value="2">Don't Know</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="leave">Leave Approved:</label>
+            <select id="leave" name="leave" class="form-control" required>
+                <option value="">Select</option>
+                <option value="0">Very difficult</option>
+                <option value="1">Very Easy</option>
+                <option value="2">Don't Know</option>
+                <option value="3">Somewhat difficult</option>
+                <option value="4">Somewhat easy</option>
+
+            </select>
+        </div>
+
+        <div class="form-group">
+          <label for="work_interfere">Work Interfere:</label>
+          <select id="work_interfere" name="work_interfere" class="form-control" required>
+              <option value="">Select</option>
+              <option value="0">Never</option>
+              <option value="1">Often</option>
+              <option value="2">Don't Know</option>
+              <option value="3">Rarely</option>
+              <option value="4">Sometimes</option>
+
+          </select>
+      </div>
+
+                <div class="form-group">
+                  <input
+                    type="submit"
+                    class="btn btn-primary btn-block"
+                    value="Predict"
+                    onclick=showPrediction()
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div>
+        <h2 class="justify-content-start row font-weight-bold mt-1" >Prediction Result</h2>
+      </div>
+      <div>{{pred}} </div>
+  
+    
+
+    
+    <!--  Scripts-->
+  
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+  
+  
+  </body>
+</html>
